@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('create_record');
 });
+Route::resource('sample_record', 'SampleRecordController');
+Route::resource('records', 'SampleViewController');
+Route::post('remark', 'SampleRecordController@update');
